@@ -1,0 +1,16 @@
+3 start
+number:7 sub_product:1
+start:7 number counter2
+7 number product
+condition1:5 counter2 one stop
+7 product sub_product
+7 zero product
+2 counter2 one counter1
+condition2:5 counter1 one 39
+1 product sub_product product
+2 counter1 one counter1
+3 condition2
+2 counter2 one counter2
+3 condition1
+stop:9
+counter2:0 counter1:0 product:0 one:1 zero:0
