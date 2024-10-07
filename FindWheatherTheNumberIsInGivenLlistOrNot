@@ -1,0 +1,20 @@
+3 start 
+
+first_element_location:37
+length:9 target:67 is_number_present:0
+
+start:4 counter length stop
+1 first_element_location counter element_location 
+7 element_location element
+
+4 element:0 target change_result
+1 counter one counter
+3 start
+
+change_result:7 one is_number_present
+3 stop
+
+stop:9
+counter:0 one:1  element_location:0
+
+1 2 3 4 5 6 7 4 67
