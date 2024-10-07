@@ -1,0 +1,207 @@
+3 start 
+
+FirstCell:PStart 
+Instruction:0
+three:3 
+seven:7 
+one:1 
+two:2 
+four:4 
+five:5 
+zero:0 
+ten:10
+eleven:11
+twelve:12
+nine:9
+-one:-1
+
+Three:JUMP
+Seven:COPY
+One:Add/Sub
+Two:Add/Sub
+Five:Less/Equal
+Four:Less/Equal
+Zero:Put
+Ten:MUL
+Eleven:DIV/MOD
+Twelve:DIV/MOD
+Nine:Stop
+
+start:7 FCounter:Three FName
+   7 Reader:PStart Instruction
+
+   4 Instruction FNum:three 
+   FName:0 
+   1 one FCounter FCounter
+   1 one FNum FNum
+   3 start
+
+JUMP:1 one Reader Input
+
+   1 Input:0 FirstCell Reader
+   2 Reader one Reader
+
+   3 start
+
+COPY:1 Reader one source_val
+   1 Reader two destination_val
+
+   1 source_val:0 FirstCell 
+   source
+   
+   1 destination_val:0 
+   FirstCell destination
+
+   2 source one source
+   2 destination one 
+   destination
+
+   7 source:0 destination:0
+
+   1 Reader three Reader
+
+   3 start
+
+Add/Sub:4 Instruction one 
+   AStart
+
+   0 2 +/-
+
+AStart:1 Reader one num1_val
+
+   1 Reader two num2_val
+
+   1 Reader three result_val
+
+   1 num1_val:0 FirstCell num1
+   1 num2_val:0 FirstCell num2
+   1 result_val:0 FirstCell 
+   result
+
+   2 num1 one num1
+   2 num2 one num2
+   2 result one result
+
++/-:1 num1:0 num2:0 result:0
+
+   1 Reader four Reader
+   0 1 +/-
+   3 start
+
+Less/Equal:4 Instruction four 
+   LStart
+   0 5 </=
+
+LStart:1 Reader one 
+   element1_val
+   1 Reader two element2_val
+
+   1 FirstCell element1_val:0 
+   element1_val
+
+   1 FirstCell element2_val:0 
+   element2_val
+
+   2 element1_val one element1
+   2 element2_val one element2
+
+</=:4 element1:0 element2:0 
+   true_state
+
+   1 Reader four Reader
+   0 4 </=
+   3 start
+
+true_state:1 Reader three jump_to
+   1 jump_to:0 FirstCell Reader
+
+   2 Reader one Reader
+
+   3 start
+
+Put:1 Reader one Put_value
+   1 Reader two Put_loc
+
+   7 Put_value:0 value
+   7 Put_loc:0 Put_destination
+
+   1 FirstCell Put_destination 
+   Put_destination
+   
+   2 Put_destination one 
+   Put_destination
+
+   0 value:0 Put_destination:0
+
+   1 Reader three Reader
+
+   3 start
+
+MUL:3 mul_start
+   counter:0 product:0
+   is_multiplier_-ve:-1
+
+mul_start:1 Reader one 
+   multiplicand_loc
+   
+   1 Reader two multiplier_loc
+
+   1 FirstCell 
+   multiplicand_loc:0 
+   multiplicand_loc
+   1 FirstCell multiplier_loc:0 
+   multiplier_loc
+
+   2 multiplier_loc one 
+   multiplier
+   2 multiplicand_loc one 
+   multiplicand
+
+   7 multiplier:0 multiplier
+   7 multiplicand:0 
+   multiplicand
+
+   5 -one multiplier 
+   mul_condition
+
+   7 one is_multiplier_-ve
+   2 zero multiplier multiplier
+
+mul_condition:4 counter multiplier end_mul
+
+   1 product multiplicand 
+   product
+
+   1 counter one counter
+   3 mul_condition
+
+end_mul:5 is_multiplier_-ve zero 
+   return_product
+
+   2 zero product product
+
+return_product:1 Reader three product_val
+
+   1 FirstCell 
+   product_val:0 product_val
+
+   2 product_val one 
+   product_loc
+
+   7 product product_loc:0
+
+   1 Reader four Reader
+
+   0 0 counter
+   0 0 product
+
+   3 start
+
+DIV/MOD:3 DivStart
+rem:0 dividend:0 divisor:qutioent:0
+
+DivStart:9
+
+Stop:9
+
+PStart:3 6 12 3 0 10 3 4 5 9
