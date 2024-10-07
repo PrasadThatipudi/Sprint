@@ -1,0 +1,25 @@
+3 start
+
+number:3 square_root_of_number:0
+
+start:5 number one stop
+
+start_of_loop:7 counter1 counter2
+1 square_root_of_number one square_root_of_number
+
+condition:4 counter2 zero 30
+
+1 product square_root_of_number product
+2 counter2 one counter2
+3 condition
+
+1 product one product
+
+5 number product stop
+
+7 zero product
+3 start_of_loop
+
+stop:9
+
+product:0 zero:0 counter1:3 counter2:0 one:1
