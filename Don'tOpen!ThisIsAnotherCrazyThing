@@ -1,0 +1,119 @@
+3 start 
+
+first_element_location:program_start
+element_location:program_start
+three:3 nineNine:99 six:6 one:1 two:2 four:4 five:5 zero:0 eight:8
+
+start:7 element_location is_jump
+4 is_jump:0 three jump
+
+7 element_location is_copy
+4 is_copy:0 five copy
+
+7 element_location is_addition
+0 1 +or-
+4 is_addition:0 two add_or_sub
+
+7 element_location is_subtraction
+0 2 +or-
+4 is_subtraction:0 one add_or_sub
+
+7 element_location is_less_than
+0 5 <or=
+4 is_less_than:0 six is_less_than_or_equal
+
+7 element_location is_equal
+0 4 <or=
+4 is_equal:0 eight is_less_than_or_equal
+
+7 element_location is_put
+4 is_put:0 zero put
+
+7 element_location is_stop
+4 is_stop:0 nineNine stop
+
+jump:1 one element_location input
+
+1 input:0 first_element_location element_location
+2 element_location one element_location
+
+3 start
+
+
+copy:1 element_location one source_val
+1 element_location two destination_val
+
+1 source_val:0 first_element_location source
+1 destination_val:0 first_element_location destination
+
+2 source one source
+2 destination one destination
+
+7 source:0 destination:0
+
+1 element_location three element_location
+
+3 start
+
+add_or_sub:1 element_location one num1_val
+
+1 element_location two num2_val
+
+1 element_location three result_val
+
+
+1 num1_val:0 first_element_location num1
+1 num2_val:0 first_element_location num2
+1 result_val:0 first_element_location result
+
+2 num1 one num1
+2 num2 one num2
+2 result one result
+
++or-:1 num1:0 num2:0 result:0
+
+1 element_location four element_location
+
+3 start
+
+is_less_than_or_equal:1 element_location one element1_val
+1 element_location two element2_val
+
+1 first_element_location element1_val:0 element1_val
+
+1 first_element_location element2_val:0 element2_val
+
+2 element1_val one element1
+2 element2_val one element2
+
+<or=:4 element1:0 element2:0 true_state
+
+1 element_location four element_location
+3 start
+
+true_state:1 element_location three jump_to
+1 jump_to:0 first_element_location element_location
+
+2 element_location one element_location
+
+3 start
+
+put:1 element_location one put_value
+1 element_location two put_loc
+
+7 put_value:0 value
+7 put_loc:0 put_destination
+
+1 first_element_location put_destination put_destination
+2 put_destination one put_destination
+
+0 value:0 put_destination:0
+
+1 element_location three element_location
+
+3 start
+
+
+stop:9
+
+program_start:3 6 1 2 0 2 3 4 5 99
