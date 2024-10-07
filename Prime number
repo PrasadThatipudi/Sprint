@@ -1,0 +1,23 @@
+3 start
+
+number:4 is_prime:1
+square_number:1 two:2
+odd_number:1 remainder:0 zero:0
+
+start:7 number remainder
+
+div_condition:5 remainder two is_even 
+
+2 remainder two remainder 
+3 div_condition
+
+is_even:4 remainder zero stop
+
+5 square_number number continue
+3 stop
+
+continue:1 odd_number two odd_number
+1 square_number odd_number square_number
+3 start
+
+stop:9
