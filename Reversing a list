@@ -1,0 +1,32 @@
+3 5 first_element_position:69 length:5
+
+start:7 length length_copy
+
+div_condition:5 length_copy two 22
+2 length_copy two length_copy
+1 count_of_swappings one count_of_swappings
+
+3 div_condition
+
+
+1 first_element_position length Index2
+
+loop_start:2 Index2 one Index2
+1 first_element_position counter Index1
+
+7 Index1 Index11
+7 Index2 Index12
+
+4 count_of_swappings counter stop
+
+7 Index1:0 Index1_copy 
+7 Index2:0 Index11:0
+7 Index1_copy Index12:0
+
+1 counter one counter
+3 loop_start
+
+stop:9
+
+0 0 zero:0 one:1 two:2 counter:0 count_of_swappings:0 length_copy:0 Index1_copy:0
+1 2 3 4 5
