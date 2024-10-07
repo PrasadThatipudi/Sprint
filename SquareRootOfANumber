@@ -1,0 +1,19 @@
+3 start
+
+number:101 square_root_of_number:0 
+
+start:7 number remainder
+
+condition:5 remainder counter stop
+
+1 square_root_of_number one square_root_of_number
+
+2 remainder counter remainder
+
+1 counter two counter
+
+3 condition
+
+stop:9
+
+remainder:0 one:1 two:2 counter:1
